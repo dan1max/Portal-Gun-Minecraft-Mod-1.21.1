@@ -49,6 +49,7 @@ public class DanisPortalGun {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){ // <-- Aquí el tab específico
             event.accept(ModItems.QTS);
+            event.accept(ModItems.RAW_QTS);
         }
     }
 
