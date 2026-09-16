@@ -1,6 +1,8 @@
 package net.danimax17.danisportalgun;
 
+import net.danimax17.danisportalgun.block.ModBlocks;
 import net.danimax17.danisportalgun.item.ModItems;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
 
@@ -33,6 +35,7 @@ public class DanisPortalGun {
         NeoForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -47,9 +50,14 @@ public class DanisPortalGun {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        // Items
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){ // <-- Aquí el tab específico
             event.accept(ModItems.QTS);
             event.accept(ModItems.RAW_QTS);
+        }
+        // Bloques
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.QTS_BLOCK);
         }
     }
 

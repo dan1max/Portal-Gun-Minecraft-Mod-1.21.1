@@ -1,4 +1,6 @@
 {
   "item.danisportalgun.qts": "QTS",
-  "item.danisportalgun.raw_qts": "Raw QTS"
+  "item.danisportalgun.raw_qts": "Raw QTS",
+
+  "block.danisportalgun.qts_block": "Block of Pure QTS"
 }
