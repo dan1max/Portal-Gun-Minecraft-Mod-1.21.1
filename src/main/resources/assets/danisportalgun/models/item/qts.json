@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "danielsportalgun:item/qts"
+    "layer0": "danisportalgun:item/qts"
   }
 }
