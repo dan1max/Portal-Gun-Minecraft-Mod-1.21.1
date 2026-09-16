@@ -58,6 +58,7 @@ public class DanisPortalGun {
         // Bloques
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.QTS_BLOCK);
+            event.accept(ModBlocks.QTS_ORE);
         }
     }
 

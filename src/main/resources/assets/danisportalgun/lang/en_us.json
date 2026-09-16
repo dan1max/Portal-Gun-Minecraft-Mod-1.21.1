@@ -2,5 +2,6 @@
   "item.danisportalgun.qts": "QTS",
   "item.danisportalgun.raw_qts": "Raw QTS",
 
-  "block.danisportalgun.qts_block": "Block of Pure QTS"
+  "block.danisportalgun.qts_block": "Block of Pure QTS",
+  "block.danisportalgun.qts_ore": "QTS Ore"
 }

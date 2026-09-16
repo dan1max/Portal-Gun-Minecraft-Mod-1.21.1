@@ -2,9 +2,11 @@ package net.danimax17.danisportalgun.block;
 
 import net.danimax17.danisportalgun.DanisPortalGun;
 import net.danimax17.danisportalgun.item.ModItems;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
@@ -17,10 +19,15 @@ public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(DanisPortalGun.MOD_ID);
 
-
+    // Adding blocks:
     public static final DeferredBlock<Block> QTS_BLOCK = registerBlock("qts_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
+
+    public static final DeferredBlock<Block> QTS_ORE = registerBlock("qts_ore",
+            () -> new DropExperienceBlock(UniformInt.of(2,4),
+                    BlockBehaviour.Properties.of()
+                            .strength(3.5f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
 
     // Para crear un bloque es necesario asociarlo a un item:
